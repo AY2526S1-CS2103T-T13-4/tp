@@ -169,6 +169,14 @@
         "project-edubase": "Project: Edubase"
       },
       "headingKeywords": {}
+    },
+    {
+      "src": "team/yuhang.md",
+      "title": "Yu Hang's Project Portfolio Page",
+      "headings": {
+        "project-edubase": "Project: EduBase"
+      },
+      "headingKeywords": {}
     }
   ]
 }
