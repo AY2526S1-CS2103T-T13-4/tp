@@ -10,7 +10,7 @@
         "goh-jin-yu": "Goh Jin Yu",
         "tan-yu-hang": "Tan Yu Hang",
         "desmond-wong-hui-sheng": "Desmond Wong Hui Sheng",
-        "reine-ong-eng-qing": "Reine Ong Eng Qing",
+        "reine-ong-eng-qin": "Reine Ong Eng Qin",
         "yeo-wen-han-marcus": "Yeo Wen Han, Marcus"
       },
       "headingKeywords": {}
@@ -151,6 +151,14 @@
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/reine.md",
+      "title": "Reine's Project Portfolio Page",
+      "headings": {
+        "project-edubase": "Project: Edubase"
       },
       "headingKeywords": {}
     }
