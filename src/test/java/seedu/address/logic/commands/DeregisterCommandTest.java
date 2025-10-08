@@ -40,7 +40,11 @@ public class DeregisterCommandTest {
 
         String expectedMessage = String.format(DeregisterCommand.MESSAGE_SUCCESS, student.getName(), idToDelete);
 
-        Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
+        Model expectedModel = new ModelManager(
+                model.getAddressBook(),
+                model.getCourseBook(),
+                new UserPrefs()
+        );
         expectedModel.deletePerson(student);
 
         assertCommandSuccess(command, model, expectedMessage, expectedModel);
