@@ -3,6 +3,7 @@ package seedu.address.logic.commands;
 import static java.util.Objects.requireNonNull;
 
 import seedu.address.logic.Messages;
+import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.StudentId;
@@ -31,18 +32,15 @@ public class DeregisterCommand extends Command {
     }
 
     @Override
-    public CommandResult execute(Model model) {
+    public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
 
         // find the student
         Person studentToDelete = model.getFilteredPersonList().stream()
                 .filter(p -> targetStudentId.equals(p.getStudentId()))
                 .findFirst()
-                .orElse(null);
-
-        if (studentToDelete == null) {
-            return new CommandResult(String.format(MESSAGE_NOT_FOUND, targetStudentId));
-        }
+                .orElseThrow(() -> new CommandException(
+                String.format(MESSAGE_NOT_FOUND, targetStudentId)));
 
         model.deletePerson(studentToDelete);
         return new CommandResult(String.format(MESSAGE_SUCCESS,
@@ -54,5 +52,11 @@ public class DeregisterCommand extends Command {
         return other == this
                 || (other instanceof DeregisterCommand
                 && targetStudentId.equals(((DeregisterCommand) other).targetStudentId));
+    }
+
+    @Override
+    public String toString() {
+        return DeregisterCommand.class.getCanonicalName()
+                + "{studentId=" + targetStudentId + "}";
     }
 }

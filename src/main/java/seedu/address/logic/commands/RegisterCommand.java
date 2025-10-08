@@ -51,4 +51,12 @@ public class RegisterCommand extends Command {
                 && phone.equals(((RegisterCommand) other).phone)
                 && gender.equals(((RegisterCommand) other).gender));
     }
+
+    @Override
+    public String toString() {
+        return RegisterCommand.class.getCanonicalName()
+                + "{name=" + name
+                + ", phone=" + phone
+                + ", gender=" + gender + "}";
+    }
 }

@@ -139,14 +139,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .add("name", name)
-                .add("studentId", studentId)
-                .add("gender", gender)
-                .add("phone", phone)
-                .add("email", email)
-                .add("address", address)
-                .add("tags", tags)
-                .toString();
+        return Person.class.getCanonicalName()
+                + "{name=" + name
+                + ", phone=" + phone
+                + ", gender=" + gender
+                + ", studentId=" + studentId + "}";
     }
 }
