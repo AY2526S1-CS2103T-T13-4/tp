@@ -25,8 +25,25 @@ public class Person {
     private final Address address;
     private final Set<Tag> tags = new HashSet<>();
 
+    private final StudentId studentId;
+    private final Gender gender;
+
     /**
      * Every field must be present and not null.
+     * Use this constructor for new Student registration.
+     */
+    public Person(Name name, Phone phone, Gender gender, StudentId studentId) {
+        requireAllNonNull(name, phone, gender, studentId);
+        this.name = name;
+        this.phone = phone;
+        this.email = null;
+        this.address = null;
+        this.gender = gender;
+        this.studentId = studentId;
+    }
+
+    /**
+     * Original constructor kept for backward compatibility (used by existing AB3 commands/tests).
      */
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
         requireAllNonNull(name, phone, email, address, tags);
@@ -35,6 +52,8 @@ public class Person {
         this.email = email;
         this.address = address;
         this.tags.addAll(tags);
+        this.gender = null;
+        this.studentId = null;
     }
 
     public Name getName() {
@@ -61,6 +80,14 @@ public class Person {
         return Collections.unmodifiableSet(tags);
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public StudentId getStudentId() {
+        return studentId;
+    }
+
     /**
      * Returns true if both persons have the same name.
      * This defines a weaker notion of equality between two persons.
@@ -68,6 +95,11 @@ public class Person {
     public boolean isSamePerson(Person otherPerson) {
         if (otherPerson == this) {
             return true;
+        }
+
+        // if studentId exists, use it as unique identifier
+        if (studentId != null && otherPerson.studentId != null) {
+            return studentId.equals(otherPerson.studentId);
         }
 
         return otherPerson != null
@@ -90,28 +122,31 @@ public class Person {
         }
 
         Person otherPerson = (Person) other;
-        return name.equals(otherPerson.name)
-                && phone.equals(otherPerson.phone)
-                && email.equals(otherPerson.email)
-                && address.equals(otherPerson.address)
-                && tags.equals(otherPerson.tags);
+        return Objects.equals(name, otherPerson.name)
+                && Objects.equals(phone, otherPerson.phone)
+                && Objects.equals(email, otherPerson.email)
+                && Objects.equals(address, otherPerson.address)
+                && Objects.equals(tags, otherPerson.tags)
+                && Objects.equals(gender, otherPerson.gender)
+                && Objects.equals(studentId, otherPerson.studentId);
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, email, address, tags);
+        return Objects.hash(name, phone, email, address, tags, gender, studentId);
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
                 .add("name", name)
+                .add("studentId", studentId)
+                .add("gender", gender)
                 .add("phone", phone)
                 .add("email", email)
                 .add("address", address)
                 .add("tags", tags)
                 .toString();
     }
-
 }
