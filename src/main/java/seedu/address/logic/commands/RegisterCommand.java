@@ -2,7 +2,6 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.address.logic.Messages;
 import seedu.address.model.Model;
 import seedu.address.model.person.Gender;
 import seedu.address.model.person.Name;
@@ -10,6 +9,11 @@ import seedu.address.model.person.Person;
 import seedu.address.model.person.Phone;
 import seedu.address.model.person.StudentId;
 
+/**
+ * Registers a new student in the address book.
+ * This command creates a new student with an auto-generated student ID
+ * and adds them to the address book.
+ */
 public class RegisterCommand extends Command {
 
     public static final String COMMAND_WORD = "register";
@@ -24,6 +28,13 @@ public class RegisterCommand extends Command {
     private final Phone phone;
     private final Gender gender;
 
+    /**
+     * Creates a RegisterCommand to register a new student with the specified details.
+     *
+     * @param name the name of the student
+     * @param phone the phone number of the student
+     * @param gender the gender of the student
+     */
     public RegisterCommand(Name name, Phone phone, Gender gender) {
         requireNonNull(name);
         requireNonNull(phone);

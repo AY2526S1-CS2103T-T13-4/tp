@@ -2,7 +2,6 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
-import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.Person;
@@ -26,6 +25,12 @@ public class DeregisterCommand extends Command {
 
     private final StudentId targetStudentId;
 
+    /**
+     * Creates a DeregisterCommand to remove the student with the specified student ID.
+     *
+     * @param targetStudentId the student ID of the student to be deregistered
+     * @throws NullPointerException if {@code targetStudentId} is null
+     */
     public DeregisterCommand(StudentId targetStudentId) {
         requireNonNull(targetStudentId);
         this.targetStudentId = targetStudentId;
