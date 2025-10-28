@@ -29,8 +29,8 @@
       <Label fx:id="studentId" styleClass="cell_small_label" />
       <Label fx:id="phone" styleClass="cell_small_label" />
       <HBox fx:id="genderContainer" spacing="5" alignment="CENTER_LEFT">
-        <Label fx:id="genderLabel" text="Gender:" />
-        <Label fx:id="genderValue" />
+        <Label fx:id="genderLabel" text="Gender:" styleClass="cell_small_label" />
+        <Label fx:id="genderValue" styleClass="cell_small_label" />
       </HBox>
     </VBox>
   </GridPane>
