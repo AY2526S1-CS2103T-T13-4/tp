@@ -174,9 +174,16 @@
     },
     {
       "src": "team/marcus.md",
-      "title": "John Doe's Project Portfolio Page",
+      "title": "Marcus' Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "project-edubase": "Project: EduBase",
+        "new-feature-added-the-delete-course-functionality": "New Feature: Added the delete course functionality",
+        "new-feature-added-the-find-course-by-name-functionality": "New Feature: Added the find course by name functionality",
+        "project-management": "Project management",
+        "enhancements-to-existing-features": "Enhancements to existing features",
+        "documentation": "Documentation",
+        "community": "Community",
+        "bug-fixes": "Bug Fixes"
       },
       "headingKeywords": {}
     },
