@@ -145,7 +145,14 @@
       "src": "team/beastarz.md",
       "title": "Jin Yu's Project Portfolio Page",
       "headings": {
-        "project-edubase": "Project: EduBase"
+        "project-edubase": "Project: EduBase",
+        "new-feature-added-the-core-course-feature": "New Feature: Added the core Course feature",
+        "new-feature-added-the-remove-student-command": "New Feature: Added the remove student command",
+        "project-management": "Project management",
+        "enhancements-to-existing-features": "Enhancements to existing features",
+        "documentation": "Documentation",
+        "community": "Community",
+        "tools": "Tools"
       },
       "headingKeywords": {}
     },
