@@ -114,7 +114,7 @@
         "system-wide-commands-school-level": "System-Wide Commands (School Level)",
         "viewing-help-help": "Viewing help : help",
         "creating-a-course-create-course": "Creating a Course: create_course",
-        "viewing-all-courses-view-course": "Viewing All Courses: view_course",
+        "viewing-all-courses-view-courses": "Viewing All Courses: view_courses",
         "edit-course-edit-course": "Edit Course: edit_course",
         "find-course-by-name-find-course-by-name": "Find Course By Name: find_course_by_name",
         "deleting-a-course-delete-course": "Deleting a Course: delete_course",
