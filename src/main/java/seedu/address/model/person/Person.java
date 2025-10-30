@@ -2,8 +2,6 @@ package seedu.address.model.person;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
-import java.util.Objects;
-
 import seedu.address.commons.util.ToStringBuilder;
 
 /**
@@ -53,7 +51,7 @@ public class Person {
         }
 
         return otherPerson != null
-                && otherPerson.isSameStudentId(getStudentId());
+                && studentId.equals(otherPerson.studentId);
     }
 
     /**
@@ -79,16 +77,12 @@ public class Person {
         }
 
         Person otherPerson = (Person) other;
-        return name.equals(otherPerson.name)
-                && phone.equals(otherPerson.phone)
-                && gender.equals(otherPerson.gender)
-                && studentId.equals(otherPerson.studentId);
+        return studentId.equals(otherPerson.studentId);
     }
 
     @Override
     public int hashCode() {
-        // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, gender, studentId);
+        return studentId.hashCode();
     }
 
     @Override
