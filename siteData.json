@@ -58,7 +58,6 @@
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
         "user-stories-2": "User Stories",
-        "school-level-stories": "School Level Stories",
         "use-cases": "Use cases",
         "non-functional-requirements": "Non-Functional Requirements",
         "glossary": "Glossary",
@@ -116,6 +115,7 @@
         "student-management": "Student Management",
         "enrollment-management": "Enrollment Management",
         "faq": "FAQ",
+        "q-why-am-i-unable-to-add-more-than-50-characters-for-a-course-name-or-student-name-a-limiting-names-to-50-characters-ensures-a-consistent-and-readable-interface-across-all-devices-this-design-decision-keeps-the-display-tidy-and-prevents-layout-issues-since-students-and-courses-are-uniquely-identified-by-their-id-using-shorter-names-will-not-affect-accurate-identification": "Q: Why am I unable to add more than 50 characters for a Course Name or Student name?\nA: Limiting names to 50 characters ensures a consistent and readable interface across all devices. This design decision keeps the display tidy and prevents layout issues. Since Students and Courses are uniquely identified by their ID, using shorter names will not affect accurate identification.",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
       },
