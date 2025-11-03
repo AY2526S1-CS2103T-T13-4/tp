@@ -161,6 +161,14 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/gnahuy123.md",
+      "title": "Yu Hang's Project Portfolio Page",
+      "headings": {
+        "project-edubase": "Project: EduBase"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "team/johndoe.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
@@ -188,14 +196,6 @@
       "title": "Reine Ong's Project Portfolio Page",
       "headings": {
         "project-edubase": "Project: Edubase"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "team/yuhang.md",
-      "title": "Yu Hang's Project Portfolio Page",
-      "headings": {
-        "project-edubase": "Project: EduBase"
       },
       "headingKeywords": {}
     }
