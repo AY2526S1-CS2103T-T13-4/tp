@@ -27,7 +27,7 @@ Given below are my contributions to the project.
 * **Added `view_course_details` commands**
     * **What it does:** Displays students in a specified course. 
     * **Justification:** Users can view which students are part of which class.
-    * **Highlights:** Used defensive programming principles to prevent null parameters
+    * **Highlights:** Used defensive programming principles to prevent null parameters.
     * **Pull Requests:** [\#89](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/89)
 
 * **Code contributed**: [RepoSense link](https://nus-cs2103-ay2526s1.github.io/tp-dashboard/?search=&sort=groupTitle&sortWithin=title&timeframe=commit&mergegroup=&groupSelect=groupByRepos&breakdown=true&checkedFileTypes=docs~functional-code~test-code~other&since=2025-09-19T00%3A00%3A00&filteredFileName=&tabOpen=true&tabType=authorship&tabAuthor=gnahuy123&tabRepo=AY2526S1-CS2103T-T13-4%2Ftp%5Bmaster%5D&authorshipIsMergeGroup=false&authorshipFileTypes=docs~functional-code~test-code&authorshipIsBinaryFileTypeChecked=false&authorshipIsIgnoredFilesChecked=false)
@@ -40,10 +40,12 @@ Given below are my contributions to the project.
     * Added documentation for the features `edit_student` and `edit_course` [\#186](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/186)
   * Developer Guide:
     * Added UML diagram for `model` [\#94](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/94)
-    
+    * Revamp guides to tailor to target audience more and created manual test cases[\#278](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/278) 
+ 
 * **Community**
   * PRs reviewed (with non-trivial review comments): [\#83](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/83), [\#90](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/90)
 
 * **Tools**:
+  * Created team repo, initial labels and milestones.
   * Integrated CodeCov into team repo.
 ---
