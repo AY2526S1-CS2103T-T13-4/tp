@@ -7,7 +7,7 @@
 
 We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg).
 
-You can reach us at the email `seer[at]comp.nus.edu.sg`
+You can reach us at the email `e1398507@u.nus.edu` and include `[EduBase]` in the email header.
 
 ## Project team
 
@@ -24,7 +24,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 <img src="images/gnahuy123.png" width="200px">
 
 [[github](http://github.com/gnahuy123)]
-[[portfolio](team/yuhang.md)]
+[[portfolio](team/gnahuy123)]
 
 
 ### Desmond Wong Hui Sheng
