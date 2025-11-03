@@ -45,12 +45,13 @@ public class DeregisterCommand extends Command {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
-        List<Person> lastShownList = model.getFilteredPersonList();
+        List<Person> allPersons = model.getAddressBook().getPersonList();
 
-        Person toDelete = lastShownList.stream()
+        Person toDelete = model.getAddressBook().getPersonList().stream()
                 .filter(p -> p.getStudentId().equals(targetId))
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(() ->
+                        new CommandException(String.format(MESSAGE_STUDENT_NOT_FOUND, targetId)));
 
         if (toDelete == null) {
             throw new CommandException(String.format(MESSAGE_STUDENT_NOT_FOUND, targetId));
