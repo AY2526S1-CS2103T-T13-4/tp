@@ -35,7 +35,7 @@ public class RegisterCommand extends Command {
 
     public static final String MESSAGE_SUCCESS = "New student registered: %1$s";
     public static final String MESSAGE_DUPLICATE_PERSON = "This student already exists in the system";
-    public static final String MESSAGE_OUT_OF_STUDENT_ID = "Student id reaches the max (S99999),"
+    public static final String MESSAGE_OUT_OF_STUDENT_ID = "Student id reaches the max (S99999), "
             + "unable to add new student";
 
     private final Name name;
@@ -74,6 +74,7 @@ public class RegisterCommand extends Command {
         }
 
         model.addPerson(toAdd);
+        model.updateFilteredCourseList(Model.PREDICATE_SHOW_ALL_COURSES);
         return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.format(toAdd)));
     }
 
