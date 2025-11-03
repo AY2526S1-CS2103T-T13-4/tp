@@ -50,8 +50,7 @@ public class DeregisterCommand extends Command {
         Person toDelete = model.getAddressBook().getPersonList().stream()
                 .filter(p -> p.getStudentId().equals(targetId))
                 .findFirst()
-                .orElseThrow(() ->
-                        new CommandException(String.format(MESSAGE_STUDENT_NOT_FOUND, targetId)));
+                .orElseThrow(null);
 
         if (toDelete == null) {
             throw new CommandException(String.format(MESSAGE_STUDENT_NOT_FOUND, targetId));
