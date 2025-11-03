@@ -115,7 +115,6 @@
       "src": "UserGuide.md",
       "headings": {
         "edubase-user-guide": "EduBase User Guide",
-        "edubase-lets-you-handle-all-of-this-through-quick-keyboard-commands-no-need-to-navigate-through-multiple-menus-or-maintain-complex-spreadsheets": "EduBase lets you handle all of this through quick keyboard commands—no need to navigate through multiple menus or maintain complex spreadsheets.",
         "quick-start": "Quick start",
         "features": "Features",
         "general-application-commands": "General Application Commands",
@@ -123,7 +122,6 @@
         "student-management": "Student Management",
         "enrollment-management": "Enrollment Management",
         "faq": "FAQ",
-        "q-i-m-running-classes-alone-how-does-this-save-me-time-compared-to-my-current-methods-a-edubase-eliminates-the-need-to-open-multiple-spreadsheet-tabs-or-scroll-through-long-contact-lists-with-commands-like-add-student-s00001-c0001-you-can-enroll-students-in-seconds-the-find-student-by-name-and-find-student-by-id-commands-let-you-retrieve-any-information-instantly-perfect-when-parents-call-with-questions-or-during-busy-enrollment-periods": "Q: I'm running classes alone. How does this save me time compared to my current methods?\nA: EduBase eliminates the need to open multiple spreadsheet tabs or scroll through long contact lists. With commands like add_student S00001 C0001, you can enroll students in seconds. The find_student_by_name and find_student_by_id commands let you retrieve any information instantly—perfect when parents call with questions or during busy enrollment periods.",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
       },
