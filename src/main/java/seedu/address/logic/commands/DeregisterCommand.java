@@ -47,7 +47,7 @@ public class DeregisterCommand extends Command {
         requireNonNull(model);
         List<Person> allPersons = model.getAddressBook().getPersonList();
 
-        Person toDelete = model.getAddressBook().getPersonList().stream()
+        Person toDelete = allPersons.stream()
                 .filter(p -> p.getStudentId().equals(targetId))
                 .findFirst()
                 .orElse(null);
