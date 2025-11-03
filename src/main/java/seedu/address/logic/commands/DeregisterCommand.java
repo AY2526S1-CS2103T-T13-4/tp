@@ -67,6 +67,8 @@ public class DeregisterCommand extends Command {
         }
 
         model.deletePerson(toDelete);
+        model.updateFilteredPersonList(Model.PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredCourseList(Model.PREDICATE_SHOW_ALL_COURSES);
         return new CommandResult(String.format(MESSAGE_DEREGISTER_SUCCESS,
                 toDelete.getName(), toDelete.getStudentId()));
     }

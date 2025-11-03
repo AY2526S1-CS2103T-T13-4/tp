@@ -218,7 +218,7 @@ public class RegisterCommandTest {
 
         @Override
         public void updateFilteredPersonList(Predicate<Person> predicate) {
-            throw new AssertionError("This method should not be called.");
+            return;
         }
 
         @Override
@@ -258,7 +258,6 @@ public class RegisterCommandTest {
 
         @Override
         public void updateFilteredCourseList(Predicate<Course> predicate) {
-            throw new AssertionError("This method should not be called.");
         }
 
         @Override

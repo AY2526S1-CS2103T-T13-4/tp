@@ -131,14 +131,24 @@ Allows teachers to create a new course. Duplicate course names are allowed, but 
 
 ---
 
-#### Viewing All Courses: `view_courses`
+#### Viewing Courses: `view_courses`
 
-Allows users to view a list of all existing courses with their `Course ID`s.
+Allows users to view all courses or find out the courses which a student enrolled.
 
-**Format:** `view_courses`
+**Format:** `view_courses [STUDENT_ID]`
+
+**Requirements:**
+* `Student ID` need to be in valid format, which is `S` followed by 5 digits (e.g., SXXXXX).
+
+<box type="caution" seamless>
+
+**Caution:** You can only enter at most 1 student id, otherwise there will be an error on invalid student id.
+
+</box>
 
 **Example:**
-* `view_courses`
+* `view_courses` (to see all courses)
+* `view_courses S00001` (to see courses enrolled by a student)
 
 ---
 
@@ -423,7 +433,7 @@ Allows teachers to unenroll a student from the currently entered course using `S
 **Q**: I'm transitioning from Excel spreadsheets. Can I still manage my tuition center with this?<br>
 **A**: Yes! EduBase is designed for exactly this transition. Instead of managing multiple spreadsheet tabs, you can use simple commands like `view_course_details C0001` to see all students in a class, or `find_student_by_name Alice` to quickly find contact information.
 
-**Q**: I need to quickly contact parents before class. How do I find phone numbers fast?<br>
+**Q**: I need to quickly contact the student before class. How do I find phone numbers fast?<br>
 **A**: Use `find_student_by_name <NAME>` to instantly see student details including phone numbers. For example: `find_student_by_name John` will show all students named John with their contact information.
 
 **Q**: Can I see how many students are in each of my tuition classes?<br>
@@ -454,14 +464,14 @@ Allows teachers to unenroll a student from the currently entered course using `S
 
 **Course Management**
 
-| **Action**                                                                                                                           | **Format,** **Examples**                                                                                    |
-|:-------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| **Create Course**                                                                                                                    | `create_course n/<COURSE_NAME> id/<COURSE_ID>` <br> e.g., `create_course n/Calculus II id/C1231`            |
-| **View Courses**                                                                                                                     | `view_courses`                                                                                              |
-| **View Course Details**                                                                                                              | `view_course_details <COURSE_ID>` <br> e.g., `view_course_details C0001`                                    |
-| **Find Course By Name**                                                                                                              | `find_course_by_name <COURSE_NAME>` <br> e.g., `find_course_by_name English`                                |
-| **Edit Course**                                                                                                                      | `edit_course INDEX n/<COURSE_NAME> id/<COURSE_ID>` <br> e.g., `edit_course 1 n/Calculus II id/C1231`        |
-| **Delete Course**                                                                                                                    | `delete_course <COURSE_ID>` <br> e.g., `delete_course C0003`                                                |
+| **Action**              | **Format,** **Examples**                                                                             |
+|:------------------------|:-----------------------------------------------------------------------------------------------------|
+| **Create Course**       | `create_course n/<COURSE_NAME> id/<COURSE_ID>` <br> e.g., `create_course n/Calculus II id/C1231`     |
+| **View Courses**        | `view_courses [STUDENT_ID]` <br> e.g., `view_courses S00001`                                         |
+| **View Course Details** | `view_course_details <COURSE_ID>` <br> e.g., `view_course_details C0001`                             |
+| **Find Course By Name** | `find_course_by_name <COURSE_NAME>` <br> e.g., `find_course_by_name English`                         |
+| **Edit Course**         | `edit_course INDEX n/<COURSE_NAME> id/<COURSE_ID>` <br> e.g., `edit_course 1 n/Calculus II id/C1231` |
+| **Delete Course**       | `delete_course <COURSE_ID>` <br> e.g., `delete_course C0003`                                         |
 
 **Student Management**
 

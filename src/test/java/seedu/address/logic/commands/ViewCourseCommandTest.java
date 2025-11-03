@@ -3,6 +3,8 @@ package seedu.address.logic.commands;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.testutil.TypicalPersons.ALICE;
 
+import java.util.function.Predicate;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +13,7 @@ import seedu.address.model.CourseBook;
 import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
+import seedu.address.model.person.Person;
 import seedu.address.model.person.StudentId;
 import seedu.address.testutil.TypicalCourses;
 import seedu.address.testutil.TypicalPersons;
@@ -57,6 +60,8 @@ public class ViewCourseCommandTest {
         StudentId studentId = ALICE.getStudentId();
         String expectedMessage = String.format(ViewCourseCommand.MESSAGE_NO_COURSES_FOR_STUDENT, studentId);
         expectedModel.updateFilteredCourseList(course -> course.getStudentIds().contains(studentId.getValue()));
+        Predicate<Person> studentPredicate = s -> s.isSameStudentId(studentId);
+        expectedModel.updateFilteredPersonList(studentPredicate);
         assertCommandSuccess(new ViewCourseCommand(studentId), model, expectedMessage, expectedModel);
     }
 
@@ -84,6 +89,8 @@ public class ViewCourseCommandTest {
         StudentId studentId = ALICE.getStudentId();
         String expectedMessage = String.format(ViewCourseCommand.MESSAGE_SUCCESS_FILTERED, studentId);
         testExpectedModel.updateFilteredCourseList(course -> course.getStudentIds().contains(studentId.getValue()));
+        Predicate<Person> studentPredicate = s -> s.isSameStudentId(studentId);
+        testExpectedModel.updateFilteredPersonList(studentPredicate);
         assertCommandSuccess(new ViewCourseCommand(studentId), testModel, expectedMessage, testExpectedModel);
     }
 }

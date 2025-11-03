@@ -88,6 +88,7 @@ public class DeregisterCommandTest {
         Model expectedModel = new ModelManager(model.getAddressBook(), model.getCourseBook(), new UserPrefs());
         expectedModel.deletePerson(personToDelete);
         expectedModel.updateFilteredPersonList(person -> person.equals(personToDelete));
+        expectedModel.updateFilteredPersonList(Model.PREDICATE_SHOW_ALL_PERSONS);
 
         assertCommandSuccess(deregisterCommand, model, expectedMessage, expectedModel);
     }

@@ -41,6 +41,8 @@ public class DeleteCourseCommand extends Command {
             throw new CommandException(String.format(MESSAGE_NOT_FOUND, courseId));
         }
         model.deleteCourse(course);
+        model.updateFilteredPersonList(Model.PREDICATE_SHOW_ALL_PERSONS);
+        model.updateFilteredCourseList(Model.PREDICATE_SHOW_ALL_COURSES);
         if (course.getName() == null) {
             return new CommandResult(MESSAGE_SUCCESS);
         }
