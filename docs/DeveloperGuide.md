@@ -155,13 +155,13 @@ This section describes some noteworthy details on proposed future enhancements.
 ### Proposed Feature — Tags for Courses
 
 #### Motivation
-Currently, each course can only store fixed information such as course name, code, and number of students enrolled. However, users may wish to add **custom remarks** — for example, the **name of the teacher-in-charge**, **difficulty level**, or **semester offered**.
+Currently, each course can only store fixed information such as course name, code, and number of students enrolled. However, users may wish to add **custom remarks**. For example, the **class timing**, **difficulty level**, or **year offered**.
 A flexible **tagging system** allows users to attach personalized tags to courses without altering the base data model.
 
 #### User Stories
 | Version | As a ...                  | I want to ...             | So that I can ...                         |
 |---------|---------------------------|---------------------------|-------------------------------------------|
-| v1.3    | busy tuition teacher      | add tags to my classes    | remember the location of this lesson      |
+| v1.3    | busy tuition teacher      | add tags to my classes    | remember the timing of this lesson        |
 | v1.3    | tuition teacher           | remove tags from a course | keep my course list tidy                  |
 | v1.4    | organized tuition teacher | list all tags             | quickly find classes with certain remarks |
 | v1.4    | tuition teacher           | edit a tag                | update outdated information               |
@@ -184,7 +184,7 @@ The following class diagram shows the key relationships among `Course` and `Tag`
 
 When a user executes the `addtag` command — e.g.,
 
-`addtag 1 t/Dr Tan teaches this course`
+`addtag 1 t/Friday 2pm`
 
 the following steps occur:
 
@@ -201,10 +201,10 @@ the following steps occur:
 
 **Command:**
 
-`addtag 2 t/Dr Tan teaches this course`
+`addtag 2 t/Friday 2pm`
 
 **Expected behavior:**
-Adds a new tag to the course in position 2. The course now displays: CS2103 Software Engineering [Tags: Dr Tan teaches this course]
+Adds a new tag to the course in position 2. The course now displays: P6 Maths [Tags: Friday 2pm]
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -906,8 +906,6 @@ testers are expected to do more *exploratory* testing.
 
     5. Test case: `edit_student 1` (no fields provided)<br>
        Expected: No student is edited. Error message indicates that at least one field must be provided.
-
-2. Editing a course (already covered in "Creating and managing courses" section above)
 
 ### Clearing all data
 

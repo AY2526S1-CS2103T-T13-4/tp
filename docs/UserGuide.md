@@ -9,6 +9,8 @@
 EduBase is a **desktop app for private tuition center owners to manage growing student enrollment and multiple classes, optimized for use via a Command Line Interface** (CLI). If you've recently scaled up from teaching a few students to running a full tuition center with dozens of classes and hundreds of students, EduBase helps you stay organized without expensive management software. If you can type fast, EduBase can get your administrative tasks done faster than traditional GUI apps or spreadsheets.
 <page-nav-print />
 
+EduBase lets you handle all of this through quick keyboard commands—no need to navigate through multiple menus or maintain complex spreadsheets.<br/>
+
 **Why EduBase for Tuition Centers?**
 As a tuition center owner managing multiple classes solo, you need fast access to:
 - Which students are enrolled in each class
@@ -16,13 +18,13 @@ As a tuition center owner managing multiple classes solo, you need fast access t
 - Course schedules and enrollment numbers
 - Student registration details
 
-EduBase lets you handle all of this through quick keyboard commands—no need to navigate through multiple menus or maintain complex spreadsheets.
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Quick start
 
 1. Ensure you have Java `17` or above installed in your Computer.
-   **Mac users:** Ensure you have the precise JDK version prescribed [here](https://se-education.org/guides/tutorials/javaInstallationMac.html).
+**Mac users:** Ensure you have the precise JDK version prescribed [here](https://se-education.org/guides/tutorials/javaInstallationMac.html).
 
 1. Download the latest `.jar` file from [here](https://github.com/AY2526S1-CS2103T-T13-4/tp/releases).
 
@@ -43,7 +45,7 @@ EduBase lets you handle all of this through quick keyboard commands—no need to
 
 * `exit` : Exits the app.
 
-1. Refer to the [Features](#features) below for details of each command.
+* Refer to the [Features](#features) below for details of each command.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -140,7 +142,7 @@ Allows users to view all courses or find out the courses which a student enrolle
 **Requirements:**
 * `Student ID` need to be in valid format, which is `S` followed by 5 digits (e.g., SXXXXX).
 
-<box type="caution" seamless>
+<box type="warning" seamless>
 
 **Caution:** You can only enter at most 1 student id, otherwise there will be an error on invalid student id.
 
@@ -205,8 +207,12 @@ Allows users to edit course id and course name by selecting its index in view li
 **Example:**
 * `edit_course 1 n/English 101 id/C0001`
 
+<box type="tip" seamless>
+
 **Tips:**
 * If the new data you enter is identical to the original data, the system will still process the action and display a success message.
+
+</box>
 
 ---
 
@@ -334,8 +340,12 @@ Allows users to edit student name, phone and gender by selecting its index in vi
 **Example:**
 * `edit_student 1 n/John Doe p/1230499 g/Male`
 
+<box type="tip" seamless>
+
 **Tips:**
 * If the new data you enter is identical to the original data, the system will still process the action and display a success message.
+
+</box>
 
 ---
 
@@ -406,7 +416,7 @@ Allows teachers to unenroll a student from the currently entered course using `S
 * The target course exists in the EB database.
 * The target student is currently enrolled in the target course.
 
-**Examples:**
+**Example:**
 * `remove_student S00001 C0001`
 
 <box type="tip" seamless>
@@ -443,6 +453,7 @@ Allows teachers to unenroll a student from the currently entered course using `S
 
 **Q**: I'm running classes alone. How does this save me time compared to my current methods?<br>
 **A**: EduBase eliminates the need to open multiple spreadsheet tabs or scroll through long contact lists. With commands like `add_student S00001 C0001`, you can enroll students in seconds. The `find_student_by_name` and `find_student_by_id` commands let you retrieve any information instantly—perfect when parents call with questions or during busy enrollment periods.
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Known issues
@@ -450,6 +461,7 @@ Allows teachers to unenroll a student from the currently entered course using `S
 1. **When using multiple screens**, if you move the application to a secondary screen, and later switch to using only the primary screen, the GUI will open off-screen. The remedy is to delete the `preferences.json` file created by the application before running the application again.
 2. **If you minimize the Help Window** and then run the `help` command (or use the `Help` menu, or the keyboard shortcut `F1`) again, the original Help Window will remain minimized, and no new Help Window will appear. The remedy is to manually restore the minimized Help Window.
 3. **On macOS devices**, bolded text in the UI may appear slightly cut off. There is currently no known fix, but the text remains largely readable.
+4. If you edit the json files in the location of EduBase, an error might be thrown.
 
 --------------------------------------------------------------------------------------------------------------------
 
