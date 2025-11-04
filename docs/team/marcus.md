@@ -63,6 +63,6 @@ Given below are my contributions to the project.
 
 * Fixed the application window displaying wrong name ([Issue #109](https://github.com/AY2526S1-CS2103T-T13-4/tp/issues/109), [Pull request #108](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/108)).
 
-* Added message for calling `view_course` on empty coursebook ([Pull request #164](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/164)).
+* Added message for calling `view_courses` on empty coursebook ([Pull request #164](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/164)).
 
 * Removed tag functionality from UI ([Pull request #167](https://github.com/AY2526S1-CS2103T-T13-4/tp/pull/167)).
