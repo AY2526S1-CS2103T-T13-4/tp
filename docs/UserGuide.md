@@ -56,7 +56,7 @@ EduBase is a **desktop app for teachers to manage student and courses, optimized
 * Parameters can be in any order for commands using flags (e.g., `n/`, `g/`, `d/`).<br>
   e.g. for `register n/NAME g/GENDER p/PHONE`, `register g/GENDER n/NAME p/PHONE` is also acceptable.
 
-* Extraneous parameters for commands that do not take in parameters (such as `view_courses`, `exit`, and `list`) will be ignored.
+* Extraneous parameters for commands that do not take in parameters (such as `exit`, and `list`) will be ignored.
 
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines as space characters surrounding line-breaks may be omitted when copied over to the application.
   </box>
